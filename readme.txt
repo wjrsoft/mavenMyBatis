@@ -1,0 +1,1 @@
+项目ressources里有执行脚本

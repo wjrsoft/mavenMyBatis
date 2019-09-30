@@ -3,19 +3,19 @@ package com.server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dao.DeptMapper;
-import com.model.Dept;
+import com.dao.DeptDAO;
+import com.schema.Dept;
 @Service("deptService")
 public class DeptServerImpl implements DeptServerI{
-	public DeptMapper deptMapper;
+	public DeptDAO deptMapper;
 	
 	
 	
-	public DeptMapper getDeptMapper() {
+	public DeptDAO getDeptMapper() {
 		return deptMapper;
 	}
     @Autowired
-	public void setDeptMapper(DeptMapper deptMapper) {
+	public void setDeptMapper(DeptDAO deptMapper) {
 		this.deptMapper = deptMapper;
 	}
 

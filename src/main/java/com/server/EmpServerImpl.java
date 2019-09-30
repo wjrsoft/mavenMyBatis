@@ -5,19 +5,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dao.EmpMapper;
-import com.model.Emp;
+import com.dao.EmpDAO;
+import com.schema.Emp;
 
 @Service("empService")
 public class EmpServerImpl implements EmpServerI {
-	public EmpMapper empMapper;
-	public EmpMapper getEmpMapper() {
+	public EmpDAO empMapper;
+	public EmpDAO getEmpMapper() {
 		return empMapper;
 	}
 
 
 	@Autowired
-	public void setEmpMapper(EmpMapper empMapper) {
+	public void setEmpMapper(EmpDAO empMapper) {
 		this.empMapper = empMapper;
 	}
 	

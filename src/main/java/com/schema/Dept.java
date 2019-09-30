@@ -1,4 +1,4 @@
-package com.model;
+package com.schema;
 
 public class Dept {
     private Integer deptno;

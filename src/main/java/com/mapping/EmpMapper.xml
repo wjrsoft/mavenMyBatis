@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dao.EmpMapper">
-	<resultMap id="BaseResultMap" type="com.model.Emp">
+<mapper namespace="com.dao.EmpDAO">
+	<resultMap id="BaseResultMap" type="com.schema.Emp">
 		<id column="empno" property="empno" jdbcType="INTEGER" />
 		<result column="ename" property="ename" jdbcType="VARCHAR" />
 		<result column="job" property="job" jdbcType="VARCHAR" />
@@ -42,7 +42,7 @@
 	
 	
 	<!-- 根据对象查询数据 -->
-	<select id="findByEmp"  resultMap="BaseResultMap" parameterType="com.model.Emp">
+	<select id="findByEmp"  resultMap="BaseResultMap" parameterType="com.schema.Emp">
 		select * from emp   where 1=1 
 		     <if test="ename != null">
 				and ename = #{ename,jdbcType=VARCHAR} 
@@ -75,7 +75,7 @@
 		where empno = #{empno,jdbcType=INTEGER}
 	</delete>
 	
-	<insert id="insert" parameterType="com.model.Emp">
+	<insert id="insert" parameterType="com.schema.Emp">
 		insert into emp (empno, ename, job,
 		mgr, hiredate, sal,
 		comm, deptno)
@@ -87,7 +87,7 @@
 	
 	
 	
-	<insert id="insertSelective" parameterType="com.model.Emp">
+	<insert id="insertSelective" parameterType="com.schema.Emp">
 		insert into emp
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="empno != null">
@@ -142,7 +142,7 @@
 			</if>
 		</trim>
 	</insert>
-	<update id="updateByPrimaryKeySelective" parameterType="com.model.Emp">
+	<update id="updateByPrimaryKeySelective" parameterType="com.schema.Emp">
 		update emp
 		<set>
 			<if test="ename != null">
@@ -169,7 +169,7 @@
 		</set>
 		where empno = #{empno,jdbcType=INTEGER}
 	</update>
-	<update id="updateByPrimaryKey" parameterType="com.model.Emp">
+	<update id="updateByPrimaryKey" parameterType="com.schema.Emp">
 		update emp
 		set ename = #{ename,jdbcType=VARCHAR},
 		job = #{job,jdbcType=VARCHAR},

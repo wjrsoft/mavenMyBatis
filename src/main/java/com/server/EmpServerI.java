@@ -2,7 +2,7 @@ package com.server;
 
 import java.util.List;
 
-import com.model.Emp;
+import com.schema.Emp;
 
 public interface EmpServerI {
 	public Emp getEmpById(short id);

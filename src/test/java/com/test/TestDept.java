@@ -8,7 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.alibaba.fastjson.JSON;
-import com.model.Dept;
+import com.schema.Dept;
 import com.server.DeptServerI;
 
 @RunWith(SpringJUnit4ClassRunner.class)

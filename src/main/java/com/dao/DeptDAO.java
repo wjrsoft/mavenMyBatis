@@ -5,9 +5,9 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.model.Dept;
+import com.schema.Dept;
 
-public interface DeptMapper {
+public interface DeptDAO {
     int deleteByPrimaryKey(Integer deptno);
 
     int insert(Dept record);

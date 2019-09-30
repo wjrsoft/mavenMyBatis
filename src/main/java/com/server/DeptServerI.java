@@ -1,6 +1,6 @@
 package com.server;
 
-import com.model.Dept;
+import com.schema.Dept;
 public interface DeptServerI {
 	int deleteByPrimaryKey(Integer deptno);
 

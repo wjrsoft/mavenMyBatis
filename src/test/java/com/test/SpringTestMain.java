@@ -9,6 +9,7 @@ import com.server.DeptService;
 
 public class SpringTestMain {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:spring.xml",
 				"classpath:spring-mybatis.xml");

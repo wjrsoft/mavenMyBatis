@@ -9,59 +9,59 @@ import com.dao.EmpDAO;
 import com.schema.Emp;
 
 @Service("empService")
-public class EmpServerImpl implements EmpServerI {
-	public EmpDAO empMapper;
-	public EmpDAO getEmpMapper() {
-		return empMapper;
+public class EmpServiceImpl implements EmpService {
+	public EmpDAO empDAO;
+	public EmpDAO getempDAO() {
+		return empDAO;
 	}
 
 
 	@Autowired
-	public void setEmpMapper(EmpDAO empMapper) {
-		this.empMapper = empMapper;
+	public void setempDAO(EmpDAO empDAO) {
+		this.empDAO = empDAO;
 	}
 	
 	public Emp getEmpById(short id) {
-		return empMapper.selectByPrimaryKey(id);
+		return empDAO.selectByPrimaryKey(id);
 	}
 	
 	
 
 	public int insert(Emp record) {
 		// TODO Auto-generated method stub
-		return empMapper.insert(record);
+		return empDAO.insert(record);
 	}
 
 	public int insertSelective(Emp record) {
 		// TODO Auto-generated method stub
-		return empMapper.insertSelective(record);
+		return empDAO.insertSelective(record);
 	}
 
 	public Emp selectByPrimaryKey(Short empno) {
 		// TODO Auto-generated method stub
-		return empMapper.selectByPrimaryKey(empno);
+		return empDAO.selectByPrimaryKey(empno);
 	}
 
 	public int updateByPrimaryKeySelective(Emp record) {
 		// TODO Auto-generated method stub
-		return empMapper.updateByPrimaryKeySelective(record);
+		return empDAO.updateByPrimaryKeySelective(record);
 	}
 
 	public int updateByPrimaryKey(Emp record) {
 		// TODO Auto-generated method stub
-		return empMapper.updateByPrimaryKey(record);
+		return empDAO.updateByPrimaryKey(record);
 	}
 
 
 	public List<Emp> findAll() {
 		 
-		return empMapper.findAll();
+		return empDAO.findAll();
 	}
 
 
 	public List<Emp> findByEmp(Emp record) {
 		// TODO Auto-generated method stub
-		return empMapper.findByEmp( record);
+		return empDAO.findByEmp( record);
 	}
 
     

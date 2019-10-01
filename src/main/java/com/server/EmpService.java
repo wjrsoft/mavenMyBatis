@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.schema.Emp;
 
-public interface EmpServerI {
+public interface EmpService {
 	public Emp getEmpById(short id);
 
 	int insert(Emp record);

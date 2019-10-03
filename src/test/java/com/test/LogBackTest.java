@@ -9,8 +9,10 @@ import com.alibaba.fastjson.JSON;
 import com.schema.Dept;
 import com.server.DeptService;
 
-public class SpringTestMain {
-	private final static Logger logger = LoggerFactory.getLogger(SpringTestMain.class);
+
+public class LogBackTest {
+
+	private final static Logger logger = LoggerFactory.getLogger(LogBackTest.class);
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:spring.xml",
